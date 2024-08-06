@@ -20,3 +20,7 @@ async def root():
         await browser.close()
 
         return Response(content=screenshot_bytes, media_type='image/png')
+
+@app.get("/hello")
+async def hello_world():
+    return {"message": "Hello World"}
